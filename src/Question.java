@@ -1,6 +1,11 @@
+import java.util.Random;
+
 class Question {
 
   int count;
+  Random random;
+  Word word = new Word();
+  QuestionSentence qs = new QuestionSentence();
 
   //常に表示されている１・２文目の文章の表示
   public void display(int count){
@@ -16,7 +21,15 @@ class Question {
 
   }
 
-  public void oneSentence(){
+  //問題文の表示
+  public void makeQuestion(){
+    for(int i = 0;i<10;i++){
+      for(int j =0;j<2;j++){
+        System.out.print(qs.makeSentence());
+      }
+      System.out.println();
 
+    }
   }
+
 }

@@ -5,6 +5,8 @@ class StartUp{
     Title title = new Title();
     Level level = new Level();
     Question question = new Question();
+    QuestionSentence qs = new QuestionSentence();
+
 
     //タイトル画面表示
     title.display();
@@ -12,7 +14,9 @@ class StartUp{
     //レベル選択画面
     level.display();
 
+    //ゲームスタート
     gameCount = level.gameCount();
     question.display(gameCount);
+    question.makeQuestion();
   }
 }
